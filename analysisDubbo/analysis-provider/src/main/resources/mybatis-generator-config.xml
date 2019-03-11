@@ -5,42 +5,43 @@
 <generatorConfiguration>
 
     <!-- 本地数据库驱动程序jar包的全路径 -->
-    <classPathEntry location=""/>
+    <classPathEntry location="D:\code\.bundles\mysql\mysql-connector-java\5.1.30\mysql-connector-java-5.1.30.jar"/>
 
     <context id="context" targetRuntime="MyBatis3">
         <commentGenerator>
             <property name="suppressAllComments" value="false"/>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
             <property name="suppressDate" value="true"/>
         </commentGenerator>
 
         <!-- 数据库的相关配置 -->
         <jdbcConnection
                 driverClass="com.mysql.jdbc.Driver"
-                connectionURL="jdbc:mysql://ip/jeesns?characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull&amp;allowMultiQueries=true&amp;autoReconnect=true&amp;failOverReadOnly=false"
-                userId="u"
-                password="p"/>
+                connectionURL="jdbc:mysql://www.wa000.top:60326/jeesns?characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull&amp;allowMultiQueries=true&amp;autoReconnect=true&amp;failOverReadOnly=false"
+                userId="root"
+                password="root"/>
 
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
 
         <!-- 实体类生成的位置 -->
-        <javaModelGenerator targetPackage="目标包" targetProject="目标项目classpath">
-            <property name="enableSubPackages" value="false"/>
+        <javaModelGenerator targetPackage="com.wa000.analysisFramework.analysis.provider.base.entity" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
         <!-- *Mapper.xml 文件的位置 -->
-        <sqlMapGenerator targetPackage="目标包" targetProject="目标项目classpath">
-            <property name="enableSubPackages" value="false"/>
+        <sqlMapGenerator targetPackage="com.wa000.analysisFramework.analysis.provider.base.dao.inter" targetProject="src/main/resources">
+            <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
-        <!-- Mapper 接口文件的位置 -->
-        <javaClientGenerator targetPackage="目标包" targetProject="目标项目classpath" type="XMLMAPPER">
-            <property name="enableSubPackages" value="false"/>
+        <!-- Mapper 接口文件的位置,生成DAO的包名和位置 -->
+        <javaClientGenerator targetPackage="com.wa000.analysisFramework.analysis.provider.base.dao" targetProject="src/main/java" type="XMLMAPPER">
+            <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <!-- 相关表的配置 -->
+        <!-- 相关表的配置 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名 -->
         <table tableName="表名" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false"/>
     </context>
