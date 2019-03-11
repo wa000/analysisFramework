@@ -17,9 +17,9 @@
         <!-- 数据库的相关配置 -->
         <jdbcConnection
                 driverClass="com.mysql.jdbc.Driver"
-                connectionURL="jdbc:mysql://www.wa000.top:60326/jeesns?characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull&amp;allowMultiQueries=true&amp;autoReconnect=true&amp;failOverReadOnly=false"
-                userId="root"
-                password="root"/>
+                connectionURL="jdbc:mysql://ip/jeesns?characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull&amp;allowMultiQueries=true&amp;autoReconnect=true&amp;failOverReadOnly=false"
+                userId="u"
+                password="p"/>
 
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
@@ -42,7 +42,15 @@
         </javaClientGenerator>
 
         <!-- 相关表的配置 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名 -->
-        <table tableName="表名" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               enableUpdateByExample="false"/>
+        <table tableName="stock_base" enableCountByExample="true" enableDeleteByExample="true" enableSelectByExample="true" enableUpdateByExample="true"/>
+        <table tableName="stock_detail" enableCountByExample="true" enableDeleteByExample="true" enableSelectByExample="true" enableUpdateByExample="true"/>
+        <table tableName="stock_file_log" enableCountByExample="true" enableDeleteByExample="true" enableSelectByExample="true" enableUpdateByExample="true"/>
+        <table tableName="stock_plate" enableCountByExample="true" enableDeleteByExample="true" enableSelectByExample="true" enableUpdateByExample="true"/>
+        <table tableName="stock_plate_data" enableCountByExample="true" enableDeleteByExample="true" enableSelectByExample="true" enableUpdateByExample="true"/>
+        <table tableName="stock_price_his" enableCountByExample="true" enableDeleteByExample="true" enableSelectByExample="true" enableUpdateByExample="true"/>
+        <table tableName="stock_price_his_back" enableCountByExample="true" enableDeleteByExample="true" enableSelectByExample="true" enableUpdateByExample="true"/>
+        <table tableName="stock_price_his_copy" enableCountByExample="true" enableDeleteByExample="true" enableSelectByExample="true" enableUpdateByExample="true"/>
+        <table tableName="stock_relation" enableCountByExample="true" enableDeleteByExample="true" enableSelectByExample="true" enableUpdateByExample="true"/>
+        <table tableName="stock_relation_log" enableCountByExample="true" enableDeleteByExample="true" enableSelectByExample="true" enableUpdateByExample="true"/>
     </context>
 </generatorConfiguration>
