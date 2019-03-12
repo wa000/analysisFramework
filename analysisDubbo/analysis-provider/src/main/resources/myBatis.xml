@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 读取加载配置文件信息 -->
+    <properties resource="jdbc.properties"/>
+
+    <!-- 别名 -->
+    <typeAliases>
+        <!-- <typeAlias type="com.xin.mybatis.beans.Student" alias="Student"/> -->
+        <package name="com.xin.mybatis.beans"/>
+    </typeAliases>
+
+    <!-- 配置环境变量，可以配置多个，有默认值 -->
+    <environments default="local">
+        <environment id="local">
+            <transactionManager type="JDBC" />	<!-- 事务 -->
+            <dataSource type="POOLED">			<!-- 数据源  连接池POOLED -->
+                <property name="driver" value="${jdbc.driver.local}"/>
+                <property name="url" value="${jdbc.url.local}"/>
+                <property name="username" value="${jdbc.username.local}"/>
+                <property name="password" value="${jdbc.password.local}"/>
+            </dataSource>
+        </environment>
+
+        <environment id="online">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+
+    </environments>
+
+    <!-- 配置映射文件 -->
+    <mappers>
+        <mapper resource="com/wa000/analysisFramework/analysis/provider/base/dao/inter/StockBaseMapper.xml"/>
+        <mapper resource="com/wa000/analysisFramework/analysis/provider/base/dao/inter/StockDetailMapper.xml"/>
+        <mapper resource="com/wa000/analysisFramework/analysis/provider/base/dao/inter/StockFileLogMapper.xml"/>
+        <mapper resource="com/wa000/analysisFramework/analysis/provider/base/dao/inter/StockPlateDataMapper.xml"/>
+        <mapper resource="com/wa000/analysisFramework/analysis/provider/base/dao/inter/StockPlateMapper.xml"/>
+        <mapper resource="com/wa000/analysisFramework/analysis/provider/base/dao/inter/StockPriceHisBackMapper.xml"/>
+        <mapper resource="com/wa000/analysisFramework/analysis/provider/base/dao/inter/StockPriceHisCopyMapper.xml"/>
+        <mapper resource="com/wa000/analysisFramework/analysis/provider/base/dao/inter/StockPriceHisMapper.xml"/>
+        <mapper resource="com/wa000/analysisFramework/analysis/provider/base/dao/inter/StockRelationLogMapper.xml"/>
+        <mapper resource="com/wa000/analysisFramework/analysis/provider/base/dao/inter/StockRelationMapper.xml"/>
+    </mappers>
+</configuration>
