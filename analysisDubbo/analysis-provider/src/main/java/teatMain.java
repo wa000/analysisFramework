@@ -7,6 +7,7 @@ import com.wa000.analysisFramework.analysis.provider.base.entity.StockPriceHisEx
 import com.wa000.analysisFramework.analysis.provider.base.util.MyBatisUtils;
 import org.apache.ibatis.session.SqlSession;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
@@ -17,6 +18,15 @@ public class teatMain {
 
     public static void main(String[] args) throws Exception
     {
+        testDB();
+    }
+
+    /**
+     * 测试数据库连接
+     *
+     * @throws ParseException
+     */
+    private static void testDB() throws ParseException {
         long oldTime = System.currentTimeMillis();
         SqlSession sqlSession = MyBatisUtils.getSqlSession();
         StockBaseMapper mapper = sqlSession.getMapper(StockBaseMapper.class);
