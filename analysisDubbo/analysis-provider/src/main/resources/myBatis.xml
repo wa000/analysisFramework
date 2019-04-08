@@ -48,5 +48,7 @@
         <mapper resource="com/wa000/analysisFramework/analysis/provider/base/dao/inter/StockPriceHisMapper.xml"/>
         <mapper resource="com/wa000/analysisFramework/analysis/provider/base/dao/inter/StockRelationLogMapper.xml"/>
         <mapper resource="com/wa000/analysisFramework/analysis/provider/base/dao/inter/StockRelationMapper.xml"/>
+        <mapper resource="com/wa000/analysisFramework/analysis/provider/base/dao/inter/StockAnalysisLogMapper.xml"/>
+        <mapper resource="com/wa000/analysisFramework/analysis/provider/base/dao/inter/StockAnalysisMapper.xml"/>
     </mappers>
 </configuration>
