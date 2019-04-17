@@ -2974,3 +2974,6 @@ hs_err_pid*
 /analysisWeb/target/test-classes/skins/mobile/verify/register2.ftl
 /analysisWeb/target/test-classes/skins/mobile/verify/reset-pwd.ftl
 /analysisWeb/target/test-classes/skins/mobile/watch.ftl
+/analysisWeb/target/analysisWeb/META-INF/MANIFEST.MF
+/analysisWeb/target/analysisWeb/WEB-INF/classes/META-INF/analysisWeb.kotlin_module
+/analysisWeb/target/classes/META-INF/analysisWeb.kotlin_module
