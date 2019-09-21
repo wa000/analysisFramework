@@ -2977,3 +2977,4 @@ hs_err_pid*
 /analysisWeb/target/analysisWeb/META-INF/MANIFEST.MF
 /analysisWeb/target/analysisWeb/WEB-INF/classes/META-INF/analysisWeb.kotlin_module
 /analysisWeb/target/classes/META-INF/analysisWeb.kotlin_module
+.idea

@@ -5,7 +5,9 @@
 <configuration>
     <!-- 读取加载配置文件信息 -->
     <properties resource="jdbc.properties"/>
-
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING" />
+    </settings>
     <!-- 别名 -->
     <typeAliases>
         <!-- <typeAlias type="com.xin.mybatis.beans.Student" alias="Student"/> -->

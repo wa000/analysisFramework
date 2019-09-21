@@ -41,7 +41,7 @@ public class teatMain {
         StockPriceHisExample example1 = new StockPriceHisExample();
         StockPriceHisExample.Criteria criteria1 = example1.createCriteria();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        criteria1.andLogdateEqualTo(simpleDateFormat.parse("2019-03-11 00:00:01"));
+        criteria1.andLogdateEqualTo(simpleDateFormat.parse("2019-04-28 16:00:01"));
         List<StockPriceHis> stockPriceHis = mapper1.selectByExample(example1);
 
         long currentTime = System.currentTimeMillis();
