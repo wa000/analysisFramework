@@ -15,7 +15,7 @@
 
     <properties>
         <spring.version>4.2.6.RELEASE</spring.version>
-        <mybatis.version>3.4.0</mybatis.version>
+        <mybatis.version>3.5.6</mybatis.version>
     </properties>
     <dependencies>
         <!-- 添加阿里云SDK的依赖，主要用于调用阿里DNS云解析的API -->
